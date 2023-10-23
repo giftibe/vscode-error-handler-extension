@@ -1,0 +1,42 @@
+{
+  "name": "gpt-errors",
+  "displayName": "gpt-errors",
+  "description": "chatgpt your errors on your terminal otg",
+  "version": "0.0.1",
+  "publisher": "Gift Ibe",
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "gpt-errors.analyzeError",
+        "title": "check error"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.2",
+    "@types/node": "18.x",
+    "@types/vscode": "^1.83.0",
+    "@vscode/test-electron": "^2.3.4",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.50.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "langchain": "^0.0.170"
+  }
+}
