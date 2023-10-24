@@ -1,8 +1,9 @@
 const vscode = require('vscode');
-require('dotenv').config();
 const { spawn } = require('child_process');
 const { ChatOpenAI } = require("langchain/chat_models/openai");
 const { PromptTemplate } = require("langchain/prompts");
+require('dotenv').config({ path: __dirname + '/.env' })
+
 
 const APIKey = process.env.OPENAI_API_KEY
 
@@ -39,6 +40,7 @@ async function activate(context) {
 	const disposable = vscode.commands.registerCommand('gpt-errors.analyzeError', async () => {
 		if (terminalOutput.includes('error') || terminalOutput.includes('exception') || terminalOutput.includes('Error')) {
 			try {
+				console.log("here now")
 
 				const prompt = PromptTemplate.fromTemplate(`You're a software developer, solving errors displayed on the terminal, good luck with the conversation.`);
 
@@ -63,7 +65,7 @@ async function activate(context) {
 				}
 
 			} catch (error) {
-				console.error('Error creating solution', error);
+				console.log('Error creating solution', error);
 				vscode.window.showErrorMessage('Error analyzing and handling error: ' + error.message);
 			}
 		} else {
