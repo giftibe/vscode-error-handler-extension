@@ -10,7 +10,7 @@ This is the README for your "gpt-errors" extension. This extension helps you mon
 
 - **Interactive Chat Interface**: Errors and solutions are displayed in an interactive chat-like interface, making it easier to understand and resolve issues.
 
-![Extension in Action](images/extension-demo.png)
+![Extension in Action]
 
 > Tip: Visualizing your extension's features with screenshots and animations can help users understand its capabilities better.
 
