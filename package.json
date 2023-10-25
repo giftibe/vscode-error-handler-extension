@@ -1,12 +1,17 @@
 {
   "name": "gpt-errors",
-  "displayName": "gpt-errors",
-  "description": "chatgpt your errors on your terminal otg",
+  "displayName": "GPT-errors",
+  "description": "Makes it easy to manage and debug applications using AI directly on your terminal",
   "version": "0.0.1",
   "publisher": "Gift Ibe",
   "engines": {
     "vscode": "^1.83.0"
   },
+  
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/giftibe/vscode-error-handler-extension"
+},
   "categories": [
     "Other"
   ],
